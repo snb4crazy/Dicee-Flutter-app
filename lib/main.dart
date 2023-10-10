@@ -15,7 +15,14 @@ void main() {
   );
 }
 
-class DicePage extends StatelessWidget {
+class DicePage extends StatefulWidget {
+  const DicePage({Key? key}) : super(key: key);
+
+  @override
+  State<DicePage> createState() => _DicePageState();
+}
+
+class _DicePageState extends State<DicePage> {
   @override
   Widget build(BuildContext context) {
     var leftDiceNum = 1;
@@ -28,6 +35,9 @@ class DicePage extends StatelessWidget {
             flex: 1,
             child: FlatButton(
               onPressed: () {
+                setState(() {
+                  leftDiceNum = 1;
+                });
                 print('Left button');
               },
               child: Image.asset('images/dice$leftDiceNum.png'),
