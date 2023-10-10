@@ -40,7 +40,7 @@ class _DicePageState extends State<DicePage> {
           Expanded(
             //flex sets the ratio to share space, default 1
             flex: 1,
-            child: FlatButton(
+            child: TextButton(
               onPressed: () {
                 updateDice();
                 print('Left button');
@@ -50,7 +50,7 @@ class _DicePageState extends State<DicePage> {
           ),
           Expanded(
             flex: 1,
-            child: FlatButton(
+            child: TextButton(
               onPressed: () {
                 updateDice();
                 print('Right button');
